@@ -21,20 +21,34 @@ body {
 }
 
 main {
-    position: relative;
+    position: relative; /* é preciso colocar isso para que eu consiga mexer na posição da SECTION dentro dele depois de forma absoluta e precisa */
     height: 100vh;
     
 
 }
 
 section#telefone {
-    position: absolute;
+    
+    position: absolute; /* colocando " POSITION: ABSOLUTE; " eu consigo mexer e deixar ele centralizado no meio da tela */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; /*  após isso ele vai ficar um pouco pra baixo/direita, pois esta centralizando o canto superior esquerdo no centro da tela, por isso devemos colocar um TRANSFORM: TRANSLATE (-50%, -50%), assim ele centraliza o conteúdo no centro. */
+
+    transform: translate(-50%, -50%);  /*  depois de colocar " top:50%; , left:50%; " , eu tenho que colocar "transform: translate ( -50% , -50% ) para ele retornar ao centro da tela  */
+
     height: 627px;
     width: 311px;
     
-    background:blue url('../imagens/frame-iphone.png') no-repeat;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+
+}
+
+iframe#tela {
+    
+    position: relative;
+    top: 80px;
+    left: 22px;
+    height: 472px;
+    width: 268px;
+
 
 }
